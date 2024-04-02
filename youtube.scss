@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.root {
+  margin: 0 10px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  div {
+    display: flex;
+    align-items: center;
+  }
+  .start {
+    img {
+      margin: 18px 12px;
+    }
+  }
+  .middle-with-mic {
+    width: 30%;
+    height: 40px;
+
+    .middle {
+      width: 100%;
+      border: 1px solid RGB(204, 204, 204);
+      border-radius: 20px;
+      input {
+        width: calc(100% - 80px);
+        margin-left: 20px;
+        height: 100%;
+        border: none;
+        border-right: 1px solid RGB(204, 204, 204);
+        font-size: 16px;
+      }
+      img {
+        width: 20px;
+        height: 20px;
+        margin: 5px auto;
+      }
+    }
+    .mic {
+      margin-left: 20px;
+    }
+  }
+  .end {
+    * {
+      margin: 0 10px;
+      height: 25px;
+      width: auto;
+    }
+  }
+}
+
+.container {
+  padding: 10px 12px 10px 0px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: calc(100vh - 60px);
+
+  .sidebar {
+    height: 100%;
+    overflow: auto;
+  }
+  .main {
+    width: 100%;
+    height: 100%;
+    background-color: green($color: #000000);
+    overflow: auto;
+  }
+}
+.card-video {
+  display: flex;
+  height: 288px;
+  flex-direction: column;
+  color: rgb(15, 15, 15);
+
+  img {
+    border-radius: 10px;
+    transition: all 0.2s ease;
+  }
+  img:hover {
+    border-radius: 5px;
+  }
+  .description-avatar {
+    padding: 10px 20px 0 0;
+    display: flex;
+    img {
+      margin-right: 12px;
+    }
+
+    .description {
+      h2 {
+        color: rgb(15, 15, 15);
+        font-size: 16px;
+      }
+      h3 {
+        color: rgb(96, 96, 96);
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.caroussel {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.topbar {
+  span {
+    border: 2px;
+    background-color: RGB(242, 242, 242);
+    color: #000000;
+    min-height: 30px;
+    padding: 0 10px;
+    border-radius: 5px;
+  }
+  span:hover {
+    background-color: RGB(15, 15, 15);
+    color: white;
+  }
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .logo {
+    width: 24px;
+    height: 24px;
+    margin: 25px;
+    margin-bottom: 15px;
+  }
+  span {
+    font-size: 10px;
+  }
+}
+.vertical {
+  flex-direction: column;
+}
+.horizontal {
+  flex-direction: row;
+}
