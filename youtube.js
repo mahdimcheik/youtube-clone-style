@@ -1,2 +1,17 @@
+import Navbar from "./navbar/Navbar.js";
+import Layout from "./layout/Layout.js";
+
 const main = document.getElementById("root");
-const header = document.createElement("div");
+let listVideos = [];
+
+fetch("data.json")
+  .then((response) => response.json())
+  .then((data) => {
+    listVideos = data;
+    console.log("list from src", listVideos);
+    main.appendChild(Navbar());
+    main.appendChild(Layout(listVideos));
+  })
+  .catch((err) => {
+    console.error("erreur:", err);
+  });
