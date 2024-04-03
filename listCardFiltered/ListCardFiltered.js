@@ -31,27 +31,30 @@ const cardss = [
   },
 ];
 
-export default function ListCardFiltered(cards = cardss, word = "") {
+export default function ListCardFiltered(cards = cardss, searchState$) {
   const listCard = document.createElement("div");
   listCard.classList.add("caroussel");
-  listCard.innerHTML = ``;
-  cards
-    .filter(
-      (element) =>
-        element.author.toLowerCase().includes(word) ||
-        element.title.toLowerCase().includes(word)
-    )
-    .forEach((element) =>
-      listCard.appendChild(
-        Card(
-          element.src,
-          element.title,
-          element.author,
-          element.views,
-          element.date
-        )
+
+  searchState$.subscribe((ele) => {
+    listCard.innerHTML = ``;
+    cards
+      .filter(
+        (element) =>
+          element.author.toLowerCase().includes(ele) ||
+          element.title.toLowerCase().includes(ele)
       )
-    );
+      .forEach((element) =>
+        listCard.appendChild(
+          Card(
+            element.src,
+            element.title,
+            element.author,
+            element.views,
+            element.date
+          )
+        )
+      );
+  });
 
   return listCard;
 }

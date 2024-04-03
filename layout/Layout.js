@@ -1,7 +1,7 @@
 import ListCard from "../listCard/ListCard.js";
 import ListCardFiltered from "../listCardFiltered/ListCardFiltered.js";
 
-export default function Layout(listVideos) {
+export default function Layout(listVideos, searchState$) {
   const layout = document.createElement("div");
   layout.classList.add("container");
   const sideBar = document.createElement("div");
@@ -82,7 +82,7 @@ export default function Layout(listVideos) {
   myMain.classList.add("main");
   console.log("list videos", listVideos);
   // myMain.appendChild(ListCard(listVideos));
-  myMain.appendChild(ListCardFiltered(listVideos));
+  myMain.appendChild(ListCardFiltered(listVideos, searchState$));
 
   layout.appendChild(sideBar);
   layout.appendChild(myMain);
