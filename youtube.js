@@ -12,7 +12,7 @@ fetch("data.json")
     listVideos = data;
     console.log("list from src", listVideos);
     main.appendChild(Navbar());
-    main.appendChild(SearchBar(searchState$));
+    // main.appendChild(SearchBar());
     main.appendChild(Layout(listVideos, searchState$));
   })
   .catch((err) => {

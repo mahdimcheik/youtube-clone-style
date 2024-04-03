@@ -1,4 +1,5 @@
 import Card from "../myCard/MyCard.js";
+import { searchWord } from "../context/Context.js";
 
 const cardss = [
   {
@@ -31,11 +32,11 @@ const cardss = [
   },
 ];
 
-export default function ListCardFiltered(cards = cardss, searchState$) {
+export default function ListCardFiltered(cards = cardss) {
   const listCard = document.createElement("div");
   listCard.classList.add("caroussel");
 
-  searchState$.subscribe((ele) => {
+  searchWord.subscribe((ele) => {
     listCard.innerHTML = ``;
     cards
       .filter(

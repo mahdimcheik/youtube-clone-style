@@ -1,11 +1,12 @@
-// import { searchState$ } from "../context/Context";
+import { searchWord } from "../context/Context.js";
 
-export default function SearchBar(searchState$) {
+export default function SearchBar() {
   const input = document.createElement("input");
   input.type = "text";
+  input.placeholder = "Rechercher";
   input.addEventListener("input", (e) => {
-    console.log(e.target.value);
-    searchState$.next(e.target.value);
+    console.log("triggered");
+    searchWord.next(this.target.value);
   });
   return input;
 }
