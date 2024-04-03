@@ -6,7 +6,7 @@ export default function SearchBar() {
   input.placeholder = "Rechercher";
   input.addEventListener("input", (e) => {
     console.log("triggered");
-    searchWord.next(this.target.value);
+    searchWord.next(e.target.value);
   });
   return input;
 }

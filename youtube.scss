@@ -149,3 +149,10 @@
 .horizontal {
   flex-direction: row;
 }
+
+.center {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}

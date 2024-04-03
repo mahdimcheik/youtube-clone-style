@@ -1,9 +1,9 @@
 import SearchBar from "./SerachBar.js";
+console.log("search br : ", SearchBar().formTarget ? "true" : "false");
 
 function Image(src, height, width) {
   const imageBurger = document.createElement("img");
-  imageBurger.alt = "alt";
-  imageBurger.height = height;
+  (imageBurger.alt = "alt"), (imageBurger.height = height);
   imageBurger.src = src;
   imageBurger.width = width;
   return imageBurger;
@@ -17,7 +17,6 @@ function GenericDiv(genericClass) {
 export default function Navbar() {
   const navbar = document.createElement("header");
   navbar.classList.add("header");
-
   navbar.innerHTML = ` 
         <div class="start">
           <img
@@ -72,6 +71,7 @@ export default function Navbar() {
   <img src="./assets/bell.png" alt="burger" height="20" width="20" />
   <img src="./assets/profile.png" alt="burger" height="20" width="20" />
 </div>`;
+  // navbar.appendChild(SearchBar());
 
   return navbar;
 }
