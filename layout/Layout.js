@@ -1,4 +1,5 @@
 import ListCard from "../listCard/ListCard.js";
+import ListCardFiltered from "../listCardFiltered/ListCardFiltered.js";
 
 export default function Layout(listVideos) {
   const layout = document.createElement("div");
@@ -80,7 +81,8 @@ export default function Layout(listVideos) {
 
   myMain.classList.add("main");
   console.log("list videos", listVideos);
-  myMain.appendChild(ListCard(listVideos));
+  // myMain.appendChild(ListCard(listVideos));
+  myMain.appendChild(ListCardFiltered(listVideos));
 
   layout.appendChild(sideBar);
   layout.appendChild(myMain);

@@ -1,4 +1,4 @@
-export default function MyCard(
+export default function CardVideo(
   src = "https://placehold.co/334x188",
   title = "New Title",
   author = "new Author",
