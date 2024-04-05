@@ -38,6 +38,13 @@
   border-right: 1px solid RGB(204, 204, 204);
   font-size: 16px;
 }
+.header .middle-with-mic .middle input:focus,
+.header .middle-with-mic .middle input:visited,
+.header .middle-with-mic .middle input:focus-visible {
+  border: none;
+  outline: none;
+  border-right: 1px solid RGB(204, 204, 204);
+}
 .header .middle-with-mic .middle img {
   width: 20px;
   height: 20px;
@@ -104,7 +111,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  align-items: center;
   justify-content: center;
 }
 
